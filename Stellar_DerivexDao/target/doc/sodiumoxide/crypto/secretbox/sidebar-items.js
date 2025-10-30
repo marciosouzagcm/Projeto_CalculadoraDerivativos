@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["xsalsa20poly1305"]};

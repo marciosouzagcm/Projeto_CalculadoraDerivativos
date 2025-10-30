@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["read_fixed_array","read_fixed_array_json","read_fixed_opaque","read_fixed_opaque_json","read_json_string","read_var_array","read_var_array_json","read_var_opaque","read_var_opaque_json","read_var_string","read_var_string_json"],"trait":["XDRIn"]};

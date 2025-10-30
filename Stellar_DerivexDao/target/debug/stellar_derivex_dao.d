@@ -1,1 +1,0 @@
-C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\stellar_derivex_dao.exe: C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\src\lib.rs C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\src\main.rs

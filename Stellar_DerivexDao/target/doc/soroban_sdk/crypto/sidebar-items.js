@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["bls12_381"],"struct":["Crypto","Hash"]};

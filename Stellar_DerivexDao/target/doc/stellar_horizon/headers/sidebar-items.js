@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["rate_limit_limit","rate_limit_remaining","rate_limit_reset"],"struct":["HeaderMap"]};

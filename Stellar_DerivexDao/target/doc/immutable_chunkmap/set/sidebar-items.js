@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["DEFAULT_SIZE"],"struct":["Set","SetIter","WeakSetRef"],"type":["SetL","SetM","SetS","WeakSetRefL","WeakSetRefM","WeakSetRefS"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["all","for_account","for_ledger","for_transaction"],"struct":["AllPaymentsRequest","PaymentsForAccountRequest","PaymentsForLedgerRequest","PaymentsForTransactionRequest"]};

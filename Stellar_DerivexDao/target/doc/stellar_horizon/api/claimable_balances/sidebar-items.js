@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["all_by_asset","all_by_claimant","all_by_sponsor","single"],"struct":["AllClaimableBalancesRequest","SingleClaimableBalanceRequest"]};

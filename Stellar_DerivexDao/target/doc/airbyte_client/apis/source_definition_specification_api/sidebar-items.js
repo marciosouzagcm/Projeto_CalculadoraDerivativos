@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["GetSourceDefinitionSpecificationError","GetSpecificationForSourceIdError"],"fn":["get_source_definition_specification","get_specification_for_source_id"]};

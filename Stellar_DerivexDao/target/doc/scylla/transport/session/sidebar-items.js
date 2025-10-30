@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CurrentDeserializationApi","LegacyDeserializationApi","PoolSize"],"struct":["GenericSession","SessionConfig"],"trait":["AddressTranslator","DeserializationApiKind"],"type":["LegacySession","Session"]};

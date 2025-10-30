@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CreateStreamStatusError","GetStreamStatusesError","UpdateStreamStatusError"],"fn":["create_stream_status","get_stream_statuses","update_stream_status"]};

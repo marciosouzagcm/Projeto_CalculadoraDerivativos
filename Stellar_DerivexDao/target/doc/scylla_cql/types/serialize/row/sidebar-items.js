@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["BuiltinSerializationErrorKind","BuiltinTypeCheckErrorKind","ValueListToSerializeRowAdapterError"],"fn":["serialize_legacy_row"],"struct":["BuiltinSerializationError","BuiltinTypeCheckError","RowSerializationContext","SerializedValues","SerializedValuesIterator","ValueListAdapter"],"trait":["SerializeRow"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["frame_slice","result","row","value"],"struct":["DeserializationError","TypeCheckError"]};

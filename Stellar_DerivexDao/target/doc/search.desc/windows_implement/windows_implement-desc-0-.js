@@ -1,1 +1,0 @@
-searchState.loadedDescShard("windows_implement", 0, "Learn more about Rust for Windows here: …\nImplements one or more COM interfaces.")

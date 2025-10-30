@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["ExecuteDestinationCheckConnectionError","ExecuteSourceCheckConnectionError","ExecuteSourceDiscoverSchemaError"],"fn":["execute_destination_check_connection","execute_source_check_connection","execute_source_discover_schema"]};

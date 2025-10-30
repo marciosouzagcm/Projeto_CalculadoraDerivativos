@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Error"],"struct":["Config","ConfigBuilder","Iter","Tree"],"type":["DbResult"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["Adapter","HWND","LPARAM","LRESULT","QueuedEvents","SubclassingAdapter","WPARAM"]};

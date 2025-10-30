@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["AcceptAllHostFilter","AllowListHostFilter","DcHostFilter"],"trait":["HostFilter"]};

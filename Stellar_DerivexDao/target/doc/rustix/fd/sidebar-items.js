@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["BorrowedFd","OwnedFd"],"trait":["AsFd","AsRawFd","AsRawSocket","AsSocket","FromRawFd","FromRawSocket","IntoRawFd","IntoRawSocket"],"type":["RawFd"]};

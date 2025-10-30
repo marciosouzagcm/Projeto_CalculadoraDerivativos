@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["batch","row","value","writers"],"struct":["SerializationError"]};

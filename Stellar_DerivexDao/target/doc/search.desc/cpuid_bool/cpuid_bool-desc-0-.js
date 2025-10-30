@@ -1,1 +1,0 @@
-searchState.loadedDescShard("cpuid_bool", 0, "Macro for checking CPU capabilities at runtime.\nCreate module with CPUID bool code.")

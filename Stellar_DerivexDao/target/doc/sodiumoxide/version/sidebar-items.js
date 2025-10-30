@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["version_major","version_minor","version_string"]};

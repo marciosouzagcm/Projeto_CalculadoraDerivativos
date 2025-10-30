@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["init"],"mod":["base64","crypto","hex","randombytes","utils","version"]};

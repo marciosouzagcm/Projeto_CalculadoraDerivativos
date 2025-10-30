@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"attr":["contract","contractargs","contractclient","contracterror","contractimpl","contractspecfn","contracttype"],"macro":["contractfile","contractimport","contractmeta","contractmetabuiltin","internal_symbol_short","symbol_short"]};

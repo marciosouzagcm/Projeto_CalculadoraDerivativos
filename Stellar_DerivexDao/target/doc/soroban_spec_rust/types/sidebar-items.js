@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["generate_enum","generate_error_enum","generate_struct","generate_type_ident","generate_union"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["SaveStatsError","SaveSyncConfigError","SetWorkflowInAttemptError"],"fn":["save_stats","save_sync_config","set_workflow_in_attempt"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["ClaimPredicate"],"struct":["ClaimableBalanceId","Claimant"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["cdc_types","checkpoints","consumer","log_reader"]};

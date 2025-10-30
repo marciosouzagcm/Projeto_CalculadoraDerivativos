@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CreateAccountError"],"fn":["create_account","main"],"struct":["CreateAccountOptions"]};

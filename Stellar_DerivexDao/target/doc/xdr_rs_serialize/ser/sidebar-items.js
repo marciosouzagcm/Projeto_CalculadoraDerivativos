@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["write_fixed_array","write_fixed_array_json","write_fixed_opaque","write_fixed_opaque_json","write_var_array","write_var_array_json","write_var_opaque","write_var_opaque_json","write_var_string","write_var_string_json"],"trait":["Write","XDROut"]};

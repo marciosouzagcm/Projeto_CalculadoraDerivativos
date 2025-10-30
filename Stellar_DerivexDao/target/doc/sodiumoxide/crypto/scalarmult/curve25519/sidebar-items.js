@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["GROUPELEMENTBYTES","SCALARBYTES"],"fn":["scalarmult","scalarmult_base"],"struct":["GroupElement","Scalar"]};

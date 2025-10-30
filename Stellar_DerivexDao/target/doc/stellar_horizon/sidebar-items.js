@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["VERSION"],"mod":["api","client","error","headers","horizon_error","link","page","request","resources"]};

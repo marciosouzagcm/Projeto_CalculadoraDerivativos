@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["OperationType"],"struct":["CDCRow","CDCRowSchema"],"trait":["Consumer","ConsumerFactory"]};

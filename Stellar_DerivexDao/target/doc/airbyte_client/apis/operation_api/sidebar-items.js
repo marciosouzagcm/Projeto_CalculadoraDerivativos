@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CheckOperationError","CreateOperationError","DeleteOperationError","GetOperationError","ListOperationsForConnectionError","UpdateOperationError"],"fn":["check_operation","create_operation","delete_operation","get_operation","list_operations_for_connection","update_operation"]};

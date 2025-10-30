@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["copy_nonce_from","open","pack"]};

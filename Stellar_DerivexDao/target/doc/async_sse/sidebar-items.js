@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Event"],"fn":["decode","encode","upgrade"],"struct":["Decoder","Encoder","Message","Sender"]};

@@ -1,1 +1,0 @@
-searchState.loadedDescShard("bytes_lit", 0, "Bytes converts literals into an array of bytes.\nBytes converts literals into an array of bytes.\nBytesmin converts literals into an array of bytes of …")

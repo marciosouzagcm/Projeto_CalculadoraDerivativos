@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["GetLogsError"],"fn":["get_logs"]};

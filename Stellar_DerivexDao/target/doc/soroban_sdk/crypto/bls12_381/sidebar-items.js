@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["Bls12_381","Fp","Fp2","Fr","G1Affine","G2Affine"]};

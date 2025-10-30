@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["GetHealthCheckError"],"fn":["get_health_check"]};

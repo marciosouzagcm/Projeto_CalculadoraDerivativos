@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["JWK_ALG_NAME","PUBLIC_KEY_LENGTH","SECRET_KEY_LENGTH","SEED_LENGTH"],"fn":["extract_pkey","generate_keypair","open","sign","signature","verify"],"struct":["Keypair"]};

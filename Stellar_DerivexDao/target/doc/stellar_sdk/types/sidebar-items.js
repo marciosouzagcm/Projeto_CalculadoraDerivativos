@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["HttpMethod","StrictPathSource"],"struct":["Account","Asset","AssetHorizon","ClaimableBalance","Effect","FeeStats","HorizonError","Ledger","LiquidityPool","Offer","Operation","OrderBook","StrictPath","SubmitTransactionResponse","Trade","TradeAggregation","Transaction"]};

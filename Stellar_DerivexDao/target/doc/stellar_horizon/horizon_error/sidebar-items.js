@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["HorizonError"],"struct":["HorizonErrorBadRequest","HorizonErrorBadRequestExtras","HorizonErrorBase","HorizonErrorTransactionFailed","HorizonErrorTransactionFailedExtras","HorizonErrorTransactionFailedResultCodes","HorizonErrorTransactionMalformed","HorizonErrorTransactionMalformedExtras"]};

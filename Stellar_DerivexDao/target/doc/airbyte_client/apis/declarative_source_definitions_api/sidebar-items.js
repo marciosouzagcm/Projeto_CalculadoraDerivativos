@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CreateDeclarativeSourceDefinitionManifestError","ListDeclarativeManifestsError","UpdateDeclarativeManifestVersionError"],"fn":["create_declarative_source_definition_manifest","list_declarative_manifests","update_declarative_manifest_version"]};

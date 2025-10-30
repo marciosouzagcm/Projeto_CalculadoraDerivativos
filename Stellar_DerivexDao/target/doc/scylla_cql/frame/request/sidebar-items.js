@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CqlRequestKind","Request","RequestOpcode"],"mod":["auth_response","batch","execute","options","prepare","query","register","startup"],"trait":["DeserializableRequest","SerializableRequest"]};

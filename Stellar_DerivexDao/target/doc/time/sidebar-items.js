@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Format","Sign","Weekday"],"fn":["parse"],"macro":["date","offset","time"],"mod":["error","ext","macros","prelude","util"],"struct":["Date","Duration","Instant","OffsetDateTime","PrimitiveDateTime","Time","UtcOffset"],"type":["Result"]};

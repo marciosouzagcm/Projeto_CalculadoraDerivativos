@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MN_FDEFAULT"],"enum":["Error"],"fn":["decode","encode","encode_with_format","to_string"],"static":["MN_WORDS"],"type":["Result"]};

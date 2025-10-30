@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Consistency","PagingStateResponse","SerialConsistency"],"mod":["batch","prepared_statement","query"],"struct":["PagingState"]};

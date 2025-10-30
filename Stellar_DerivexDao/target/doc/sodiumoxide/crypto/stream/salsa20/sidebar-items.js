@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["KEYBYTES","NONCEBYTES"],"fn":["gen_key","stream","stream_xor","stream_xor_ic","stream_xor_ic_inplace","stream_xor_inplace"],"struct":["Key","Nonce"]};

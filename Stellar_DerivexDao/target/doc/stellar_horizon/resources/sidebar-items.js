@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["account","asset","book","claimable_balance","effect","ledger","offer","operation","root","trade","transaction"],"struct":["Asset","Path","Price"],"type":["ClaimableBalanceId","LedgerId","OfferId"]};

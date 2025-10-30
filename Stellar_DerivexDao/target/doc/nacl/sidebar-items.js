@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["ErrorCondition"],"fn":["compare","compare_v16","compare_v32","scrypt"],"mod":["public_box","secret_box","sha512","sign"],"struct":["Error"]};

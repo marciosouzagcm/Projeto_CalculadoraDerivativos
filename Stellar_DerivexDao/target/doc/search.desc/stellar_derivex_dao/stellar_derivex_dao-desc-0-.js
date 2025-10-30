@@ -1,1 +1,0 @@
-searchState.loadedDescShard("stellar_derivex_dao", 0, "Representa uma Exchange associada a um token específico.\nReturns the argument unchanged.\nReturns the argument unchanged.\nReturns the argument unchanged.\nCalls <code>U::from(self)</code>.\nCalls <code>U::from(self)</code>.\nCalls <code>U::from(self)</code>.")

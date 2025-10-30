@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Resolution"],"fn":["all_trades","fee_stats","order_book","paths_strict_receive","paths_strict_send"],"struct":["AllTradesRequest","FeeStatsRequest","OrderBookRequest","PathsStrictReceiveRequest","PathsStrictSendRequest"]};

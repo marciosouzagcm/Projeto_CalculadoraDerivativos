@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["days_in_year","is_leap_year","validate_format_string","weeks_in_year"]};

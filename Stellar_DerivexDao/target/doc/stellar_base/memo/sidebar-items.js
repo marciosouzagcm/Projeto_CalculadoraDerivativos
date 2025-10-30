@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_HASH_LEN","MAX_MEMO_TEXT_LEN"],"enum":["Memo"]};

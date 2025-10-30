@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["cofactor","prime"],"trait":["Curve","Group","GroupEncoding","GroupOps","GroupOpsOwned","ScalarMul","ScalarMulOwned","UncompressedEncoding"]};

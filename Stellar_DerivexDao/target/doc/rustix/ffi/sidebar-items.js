@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"type":["c_char","c_int","c_long","c_short","c_uint","c_ulong","c_ushort"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Authenticator","Compression"],"mod":["frame_errors","response","types","value"]};

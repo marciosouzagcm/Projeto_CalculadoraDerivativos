@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CqlResponseKind","NonErrorResponse","Response","ResponseOpcode"],"mod":["authenticate","cql_to_rust","error","event","result","supported"]};

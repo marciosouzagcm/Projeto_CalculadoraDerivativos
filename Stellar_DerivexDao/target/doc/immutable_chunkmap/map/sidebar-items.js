@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["DEFAULT_SIZE"],"struct":["Map","WeakMapRef"],"type":["MapL","MapM","MapS","WeakMapRefL","WeakMapRefM","WeakMapRefS"]};

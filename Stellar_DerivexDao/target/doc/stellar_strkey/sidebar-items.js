@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["VERSION"],"enum":["DecodeError","Strkey"],"mod":["ed25519"],"struct":["Contract","HashX","PreAuthTx","Version"]};

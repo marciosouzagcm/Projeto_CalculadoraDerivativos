@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["FirstRowError","FirstRowTypedError","IntoLegacyQueryResultError","MaybeFirstRowTypedError","SingleRowError","SingleRowTypedError"],"struct":["LegacyQueryResult","RowsExpectedError","RowsNotExpectedError","TypedRowIter"],"trait":["IntoTypedRows"]};

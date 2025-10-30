@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CompleteSourceOAuthError","GetSourceOAuthConsentError","RevokeSourceOAuthTokensError","SetInstancewideSourceOauthParamsError"],"fn":["complete_source_o_auth","get_source_o_auth_consent","revoke_source_o_auth_tokens","set_instancewide_source_oauth_params"]};

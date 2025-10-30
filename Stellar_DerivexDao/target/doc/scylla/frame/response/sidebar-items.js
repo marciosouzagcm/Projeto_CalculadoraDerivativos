@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["cql_to_rust","result"]};

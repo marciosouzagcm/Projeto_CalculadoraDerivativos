@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["DefaultMode"],"struct":["GenericSessionBuilder"],"trait":["SessionBuilderKind"],"type":["SessionBuilder"]};

@@ -1,1 +1,0 @@
-searchState.loadedDescShard("soroban_env_macros", 0, "")

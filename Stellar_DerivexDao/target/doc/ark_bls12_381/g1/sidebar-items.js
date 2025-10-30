@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["BETA","G1_GENERATOR_X","G1_GENERATOR_Y"],"fn":["endomorphism"],"struct":["Config"],"type":["G1Affine","G1Projective"]};

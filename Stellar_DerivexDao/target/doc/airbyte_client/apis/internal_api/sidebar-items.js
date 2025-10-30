@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["CreateOrUpdateStateError","GetAttemptNormalizationStatusesForJobError","SaveStatsError","SaveSyncConfigError","SetWorkflowInAttemptError","WriteDiscoverCatalogResultError"],"fn":["create_or_update_state","get_attempt_normalization_statuses_for_job","save_stats","save_sync_config","set_workflow_in_attempt","write_discover_catalog_result"]};

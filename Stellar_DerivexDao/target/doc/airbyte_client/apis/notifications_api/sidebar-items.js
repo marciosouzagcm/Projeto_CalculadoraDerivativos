@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["TryNotificationConfigError"],"fn":["try_notification_config"]};

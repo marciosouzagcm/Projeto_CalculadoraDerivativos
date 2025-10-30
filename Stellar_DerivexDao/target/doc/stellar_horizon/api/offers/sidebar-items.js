@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["all","for_account","single"],"struct":["AllOffersRequest","OffersForAccountRequest","SingleOfferRequest"]};

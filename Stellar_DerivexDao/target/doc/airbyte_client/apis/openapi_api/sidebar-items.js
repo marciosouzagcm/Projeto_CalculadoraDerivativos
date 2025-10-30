@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["GetOpenApiSpecError"],"fn":["get_open_api_spec"]};

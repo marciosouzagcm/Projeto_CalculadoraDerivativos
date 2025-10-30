@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["account","amount","asset","claim","crypto","error","ledger","memo","network","operation_result","operations","signature","time_bounds","transaction","transaction_result","xdr"]};
