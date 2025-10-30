@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["close","ioctl_fionbio","ioctl_fionread","retry_on_intr"],"struct":["Errno"],"type":["Result"]};

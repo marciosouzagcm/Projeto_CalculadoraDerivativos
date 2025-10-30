@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Password Hashing"><title>sodiumoxide::crypto::pwhash - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="sodiumoxide" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.0-nightly (90ab8eaed 2024-11-14)" data-channel="nightly" data-search-js="search-6851d9ab.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../../../sodiumoxide/index.html">sodiumoxide</a><span class="version">0.2.6</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">Module pwhash</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#example-key-derivation" title="Example (key derivation)">Example (key derivation)</a></li><li><a href="#example-password-hashing" title="Example (password hashing)">Example (password hashing)</a></li><li><a href="#example-password-verification" title="Example (password verification)">Example (password verification)</a></li></ul><h3><a href="#modules">Module Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li></ul></section><div id="rustdoc-modnav"><h2><a href="../index.html">In sodiumoxide::<wbr>crypto</a></h2></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><span class="rustdoc-breadcrumbs"><a href="../../index.html">sodiumoxide</a>::<wbr><a href="../index.html">crypto</a></span><h1>Module <span>pwhash</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../../../src/sodiumoxide/crypto\pwhash/mod.rs.html#1-73">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Password Hashing</p>
+<p>Secret keys used to encrypt or sign confidential data have to be chosen from
+a very large keyspace. However, passwords are usually short, human-generated
+strings, making dictionary attacks practical.</p>
+<p>The pwhash operation derives a secret key of any size from a password and a
+salt.</p>
+<ul>
+<li>The generated key has the size defined by the application, no matter what
+the password length is.</li>
+<li>The same password hashed with same parameters will
+always produce the same key.</li>
+<li>The same password hashed with different salts
+will produce different keys.</li>
+<li>The function deriving a key from a password
+and a salt is CPU intensive and intentionally requires a fair amount of
+memory. Therefore, it mitigates brute-force attacks by requiring a
+significant effort to verify each password.</li>
+</ul>
+<p>Common use cases:</p>
+<ul>
+<li>Protecting an on-disk secret key with a password,</li>
+<li>Password storage, or rather: storing what it takes to verify a password
+without having to store the actual password.</li>
+</ul>
+<h2 id="example-key-derivation"><a class="doc-anchor" href="#example-key-derivation">§</a>Example (key derivation)</h2>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>sodiumoxide::crypto::secretbox;
+<span class="kw">use </span>sodiumoxide::crypto::pwhash;
+
+<span class="kw">let </span>passwd = <span class="string">b"Correct Horse Battery Staple"</span>;
+<span class="kw">let </span>salt = pwhash::gen_salt();
+<span class="kw">let </span><span class="kw-2">mut </span>k = secretbox::Key([<span class="number">0</span>; secretbox::KEYBYTES]);
+{
+    <span class="kw">let </span>secretbox::Key(<span class="kw-2">ref mut </span>kb) = k;
+    pwhash::derive_key(kb, passwd, <span class="kw-2">&amp;</span>salt,
+                       pwhash::OPSLIMIT_INTERACTIVE,
+                       pwhash::MEMLIMIT_INTERACTIVE).unwrap();
+}</code></pre></div>
+<h2 id="example-password-hashing"><a class="doc-anchor" href="#example-password-hashing">§</a>Example (password hashing)</h2>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>sodiumoxide::crypto::pwhash;
+<span class="kw">let </span>passwd = <span class="string">b"Correct Horse Battery Staple"</span>;
+<span class="kw">let </span>pwh = pwhash::pwhash(passwd,
+                         pwhash::OPSLIMIT_INTERACTIVE,
+                         pwhash::MEMLIMIT_INTERACTIVE).unwrap();
+<span class="kw">let </span>pwh_bytes = pwh.as_ref();
+<span class="comment">//store pwh_bytes somewhere</span></code></pre></div>
+<h2 id="example-password-verification"><a class="doc-anchor" href="#example-password-verification">§</a>Example (password verification)</h2>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>sodiumoxide::crypto::pwhash;
+
+<span class="kw">let </span>passwd = <span class="string">b"Correct Horse Battery Staple"</span>;
+<span class="comment">// in reality we want to load the password hash from somewhere
+// and we might want to create a `HashedPassword` from it using
+// `HashedPassword::from_slice(pwhash_bytes).unwrap()`
+</span><span class="kw">let </span>pwh = pwhash::pwhash(passwd,
+                         pwhash::OPSLIMIT_INTERACTIVE,
+                         pwhash::MEMLIMIT_INTERACTIVE).unwrap();
+<span class="macro">assert!</span>(pwhash::pwhash_verify(<span class="kw-2">&amp;</span>pwh, passwd));</code></pre></div>
+</div></details><h2 id="reexports" class="section-header">Re-exports<a href="#reexports" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><code>pub use self::<a class="mod" href="scryptsalsa208sha256/index.html" title="mod sodiumoxide::crypto::pwhash::scryptsalsa208sha256">scryptsalsa208sha256</a>::*;</code></div></li></ul><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="argon2i13/index.html" title="mod sodiumoxide::crypto::pwhash::argon2i13">argon2i13</a></div><div class="desc docblock-short">Argon2 summarizes the state of the art in the design of memory-hard functions.</div></li><li><div class="item-name"><a class="mod" href="argon2id13/index.html" title="mod sodiumoxide::crypto::pwhash::argon2id13">argon2id13</a></div><div class="desc docblock-short">Argon2 summarizes the state of the art in the design of memory-hard functions.</div></li><li><div class="item-name"><a class="mod" href="scryptsalsa208sha256/index.html" title="mod sodiumoxide::crypto::pwhash::scryptsalsa208sha256">scryptsalsa208sha256</a></div><div class="desc docblock-short"><code>crypto_pwhash_scryptsalsa208sha256</code>, a particular combination of Scrypt, Salsa20/8
+and SHA-256</div></li></ul></section></div></main></body></html>

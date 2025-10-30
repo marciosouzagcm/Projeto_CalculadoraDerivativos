@@ -1,0 +1,1 @@
+searchState.loadedDescShard("windows_interface", 0, "Learn more about Rust for Windows here: …\nDefines a COM interface to call or implement.")

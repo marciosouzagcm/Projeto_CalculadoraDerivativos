@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"type":["c_int","c_uint","c_ulong"]};

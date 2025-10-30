@@ -1,0 +1,12 @@
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\libsemver-d23615dd75c42ead.rmeta: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\backport.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\display.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\error.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\eval.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\identifier.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\impls.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\parse.rs
+
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\semver-d23615dd75c42ead.d: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\backport.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\display.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\error.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\eval.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\identifier.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\impls.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\parse.rs
+
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\lib.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\backport.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\display.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\error.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\eval.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\identifier.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\impls.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\semver-1.0.24\src\parse.rs:

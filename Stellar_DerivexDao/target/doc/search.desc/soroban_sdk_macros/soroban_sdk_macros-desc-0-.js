@@ -1,0 +1,1 @@
+searchState.loadedDescShard("soroban_sdk_macros", 0, "")

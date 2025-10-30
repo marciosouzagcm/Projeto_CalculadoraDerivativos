@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Async library for consuming Scylla Change Data Capture log, built on top of the Scylla Rust Driver."><title>scylla_cdc - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="scylla_cdc" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.0-nightly (90ab8eaed 2024-11-14)" data-channel="nightly" data-search-js="search-6851d9ab.js" data-settings-js="settings-0f613d39.js" ><script src="../static.files/storage-59e33391.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../scylla_cdc/index.html">scylla_<wbr>cdc</a><span class="version">0.2.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#why-use-a-library" title="Why use a library?">Why use a library?</a></li><li><a href="#other-documentation" title="Other documentation">Other documentation</a></li><li><a href="#getting-started" title="Getting started">Getting started</a></li></ul><h3><a href="#modules">Crate Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>scylla_cdc</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/scylla_cdc/lib.rs.html#1-73">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Async library for consuming <a href="https://docs.scylladb.com/using-scylla/cdc/">Scylla Change Data Capture</a> log,
+built on top of the <a href="https://docs.rs/scylla/latest/scylla/">Scylla Rust Driver</a>.</p>
+<h2 id="why-use-a-library"><a class="doc-anchor" href="#why-use-a-library">§</a>Why use a library?</h2>
+<p>The CDC log format is too complicated to be conveniently used in its raw form.
+The library enables the user to ignore the intricacies of the log’s internal structure and concentrate on the business logic.</p>
+<h2 id="other-documentation"><a class="doc-anchor" href="#other-documentation">§</a>Other documentation</h2>
+<ul>
+<li><a href="https://docs.rs/scylla/latest/scylla/">Documentation of Scylla Rust Driver</a></li>
+<li><a href="https://docs.scylladb.com">Scylla documentation</a></li>
+<li><a href="https://cassandra.apache.org/doc/latest/">Cassandra® documentation</a></li>
+<li><a href="https://docs.scylladb.com/using-scylla/cdc/">CDC documentation</a></li>
+</ul>
+<h2 id="getting-started"><a class="doc-anchor" href="#getting-started">§</a>Getting started</h2>
+<p>The following code will start reading the CDC log from now until forever and will print type of every operation read.
+To learn in more detail about how to use the library, please refer to the <a href="https://github.com/scylladb/scylla-cdc-rust/blob/main/tutorial.md">tutorial</a>.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>async_trait::async_trait;
+<span class="kw">use </span>scylla::SessionBuilder;
+<span class="kw">use </span>scylla_cdc::consumer::<span class="kw-2">*</span>;
+<span class="kw">use </span>scylla_cdc::log_reader::CDCLogReaderBuilder;
+<span class="kw">use </span>std::sync::Arc;
+
+<span class="kw">struct </span>TypePrinterConsumer;
+
+<span class="attr">#[async_trait]
+</span><span class="kw">impl </span>Consumer <span class="kw">for </span>TypePrinterConsumer {
+    <span class="kw">async fn </span>consume_cdc(<span class="kw-2">&amp;mut </span><span class="self">self</span>, data: CDCRow&lt;<span class="lifetime">'_</span>&gt;) -&gt; anyhow::Result&lt;()&gt; {
+        <span class="macro">println!</span>(<span class="string">"{}"</span>, data.operation);
+        <span class="prelude-val">Ok</span>(())
+    }
+}
+
+<span class="kw">struct </span>TypePrinterConsumerFactory;
+
+<span class="attr">#[async_trait]
+</span><span class="kw">impl </span>ConsumerFactory <span class="kw">for </span>TypePrinterConsumerFactory {
+    <span class="kw">async fn </span>new_consumer(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; Box&lt;<span class="kw">dyn </span>Consumer&gt; {
+        Box::new(TypePrinterConsumer)
+    }
+}
+
+<span class="attr">#[tokio::main]
+</span><span class="kw">async fn </span>main() -&gt; anyhow::Result&lt;()&gt; {
+    <span class="kw">let </span>session = Arc::new(
+        SessionBuilder::new()
+            .known_node(<span class="string">"172.17.0.2:9042"</span>)
+            .build()
+            .<span class="kw">await</span><span class="question-mark">?</span>,
+    );
+
+    <span class="kw">let </span>factory = Arc::new(TypePrinterConsumerFactory);
+
+    <span class="kw">let </span>(<span class="kw">_</span>, handle) = CDCLogReaderBuilder::new()
+        .session(session)
+        .keyspace(<span class="string">"ks"</span>)
+        .table_name(<span class="string">"t"</span>)
+        .consumer_factory(factory)
+        .build()
+        .<span class="kw">await
+        </span>.expect(<span class="string">"Creating the log reader failed!"</span>);
+
+    handle.<span class="kw">await
+</span>}</code></pre></div>
+</div></details><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="cdc_types/index.html" title="mod scylla_cdc::cdc_types">cdc_<wbr>types</a></div><div class="desc docblock-short">A module containing types related to CDC internal structure.</div></li><li><div class="item-name"><a class="mod" href="checkpoints/index.html" title="mod scylla_cdc::checkpoints">checkpoints</a></div><div class="desc docblock-short">A module representing the logic behind saving progress.</div></li><li><div class="item-name"><a class="mod" href="consumer/index.html" title="mod scylla_cdc::consumer">consumer</a></div><div class="desc docblock-short">A module representing the logic behind consuming the data.</div></li><li><div class="item-name"><a class="mod" href="log_reader/index.html" title="mod scylla_cdc::log_reader">log_<wbr>reader</a></div><div class="desc docblock-short">A module containing the logic behind reading and consuming the data.</div></li></ul></section></div></main></body></html>

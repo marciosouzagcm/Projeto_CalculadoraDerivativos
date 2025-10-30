@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["for_account"],"struct":["DataForAccountRequest"]};

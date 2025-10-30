@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Hashing"><title>sodiumoxide::crypto::hash - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="sodiumoxide" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.0-nightly (90ab8eaed 2024-11-14)" data-channel="nightly" data-search-js="search-6851d9ab.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../../../sodiumoxide/index.html">sodiumoxide</a><span class="version">0.2.6</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">Module hash</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#security-model" title="Security model">Security model</a></li><li><a href="#selected-primitive" title="Selected primitive">Selected primitive</a></li><li><a href="#alternate-primitives" title="Alternate primitives">Alternate primitives</a></li><li><a href="#example" title="Example">Example</a></li></ul><h3><a href="#modules">Module Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li></ul></section><div id="rustdoc-modnav"><h2><a href="../index.html">In sodiumoxide::<wbr>crypto</a></h2></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><span class="rustdoc-breadcrumbs"><a href="../../index.html">sodiumoxide</a>::<wbr><a href="../index.html">crypto</a></span><h1>Module <span>hash</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../../../src/sodiumoxide/crypto\hash/mod.rs.html#1-48">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Hashing</p>
+<h2 id="security-model"><a class="doc-anchor" href="#security-model">§</a>Security model</h2>
+<p>The <code>hash()</code> function is designed to be usable as a strong
+component of DSA, RSA-PSS, key derivation, hash-based
+message-authentication codes, hash-based ciphers, and various other
+common applications.  “Strong” means that the security of these
+applications, when instantiated with <code>hash()</code>, is the same
+as the security of the applications against generic attacks. In
+particular, the <code>hash()</code> function is designed to make
+finding collisions difficult.</p>
+<h2 id="selected-primitive"><a class="doc-anchor" href="#selected-primitive">§</a>Selected primitive</h2>
+<p><code>hash()</code> is currently an implementation of <code>SHA-512</code>.</p>
+<p>There has been considerable degradation of public confidence in the
+security conjectures for many hash functions, including <code>SHA-512</code>.
+However, for the moment, there do not appear to be alternatives that
+inspire satisfactory levels of confidence. One can hope that NIST’s
+SHA-3 competition will improve the situation.</p>
+<h2 id="alternate-primitives"><a class="doc-anchor" href="#alternate-primitives">§</a>Alternate primitives</h2>
+<p><code>NaCl</code> supports the following hash functions:</p>
+<hr />
+<div><table><thead><tr><th><code>crypto_hash</code></th><th>primitive</th><th>BYTES</th></tr></thead><tbody>
+<tr><td><code>crypto_hash_sha256</code></td><td><code>SHA-256</code></td><td>32</td></tr>
+<tr><td><code>crypto_hash_sha512</code></td><td><code>SHA-512</code></td><td>64</td></tr>
+</tbody></table>
+</div><h2 id="example"><a class="doc-anchor" href="#example">§</a>Example</h2>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>sodiumoxide::crypto::hash;
+
+<span class="kw">let </span>data_to_hash = <span class="string">b"some data"</span>;
+<span class="kw">let </span>digest = hash::hash(data_to_hash);
+
+<span class="kw">let </span><span class="kw-2">mut </span>hash_state = hash::State::new();
+hash_state.update(<span class="string">b"some "</span>);
+hash_state.update(<span class="string">b"data!"</span>);
+<span class="kw">let </span>digest = hash_state.finalize();</code></pre></div>
+</div></details><h2 id="reexports" class="section-header">Re-exports<a href="#reexports" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><code>pub use self::<a class="mod" href="sha512/index.html" title="mod sodiumoxide::crypto::hash::sha512">sha512</a>::*;</code></div></li></ul><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="sha256/index.html" title="mod sodiumoxide::crypto::hash::sha256">sha256</a></div><div class="desc docblock-short"><code>SHA-256</code>.</div></li><li><div class="item-name"><a class="mod" href="sha512/index.html" title="mod sodiumoxide::crypto::hash::sha512">sha512</a></div><div class="desc docblock-short"><code>SHA-512</code>.</div></li></ul></section></div></main></body></html>

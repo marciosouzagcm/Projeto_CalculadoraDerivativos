@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["aead","auth","box_","generichash","hash","kdf","kx","onetimeauth","pwhash","scalarmult","sealedbox","secretbox","secretstream","shorthash","sign","stream","verify"]};

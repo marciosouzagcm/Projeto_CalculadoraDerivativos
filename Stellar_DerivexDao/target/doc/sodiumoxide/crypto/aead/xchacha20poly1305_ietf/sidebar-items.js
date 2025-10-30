@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["KEYBYTES","NONCEBYTES","TAGBYTES"],"fn":["gen_key","gen_nonce","open","open_detached","seal","seal_detached"],"struct":["Key","Nonce","Tag"]};

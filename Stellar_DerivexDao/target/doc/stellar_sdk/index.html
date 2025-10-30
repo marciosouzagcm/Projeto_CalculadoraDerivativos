@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Stellar Sdk"><title>stellar_sdk - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="stellar_sdk" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.0-nightly (90ab8eaed 2024-11-14)" data-channel="nightly" data-search-js="search-6851d9ab.js" data-settings-js="settings-0f613d39.js" ><script src="../static.files/storage-59e33391.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../stellar_sdk/index.html">stellar_<wbr>sdk</a><span class="version">0.1.4</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#stellar-sdk" title="Stellar Sdk">Stellar Sdk</a><ul><li><a href="#usage" title="Usage:">Usage:</a></li></ul></li></ul><h3><a href="#modules">Crate Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li><li><a href="#structs" title="Structs">Structs</a></li><li><a href="#traits" title="Traits">Traits</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>stellar_sdk</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/stellar_sdk/lib.rs.html#1-122">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="stellar-sdk"><a class="doc-anchor" href="#stellar-sdk">§</a>Stellar Sdk</h2>
+<p>A lightweight Rust library for communicating with a Stellar Horizon server.</p>
+<h3 id="usage"><a class="doc-anchor" href="#usage">§</a>Usage:</h3>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>stellar_sdk::{CallBuilder, Server, types::Asset, utils::{Direction, Endpoint}};
+
+    <span class="kw">let </span>s = String::from(<span class="string">"https://horizon.stellar.org"</span>);
+    <span class="kw">let </span>s = Server::new(s, <span class="prelude-val">None</span>).expect(<span class="string">"Cannot connect to insecure horizon server"</span>);
+
+    <span class="kw">let </span>my_acc = s
+        .load_account(<span class="string">"GAUZUPTHOMSZEV65VNSRMUDAAE4VBMSRYYAX3UOWYU3BQUZ6OK65NOWM"</span>)
+        .unwrap();
+
+    <span class="comment">// Load transactions of an account
+    </span><span class="kw">let </span>my_account_id = String::from(<span class="string">"GAP2TJNW7NL52MPB36DZ2PB6PSIBEUEJXDG325BJQKUNDQBPKX3E2DLV"</span>);
+    <span class="kw">let </span>my_txs = s
+        .transactions()
+        .order(Direction::Desc)
+        .limit(<span class="number">2</span>)
+        .include_failed(<span class="bool-val">false</span>)
+        .for_endpoint(Endpoint::Accounts(my_account_id))
+        .call()
+        .unwrap();
+
+    <span class="comment">// Load trades of yXLM and XLM
+    </span><span class="kw">let </span>y_xlm = Asset::new(
+        String::from(<span class="string">"yXLM"</span>),
+        String::from(<span class="string">"GARDNV3Q7YGT4AKSDF25LT32YSCCW4EV22Y2TV3I2PU2MMXJTEDL5T55"</span>),
+    ).unwrap();
+
+    <span class="kw">let </span>native = Asset::native();
+
+    <span class="kw">let </span>xlm_trades = s
+        .trades()
+        .for_asset_pair(<span class="kw-2">&amp;</span>y_xlm, <span class="kw-2">&amp;</span>native)
+        .limit(<span class="number">2</span>)
+        .call()
+        .unwrap();
+
+    <span class="comment">// Load USDC liquidity pools
+    </span><span class="kw">let </span>usdc = Asset::new(
+        String::from(<span class="string">"USDC"</span>),
+        String::from(<span class="string">"GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"</span>),
+    ).unwrap();
+    <span class="kw">let </span>usdc_liquidity_pools = s.liquidity_pools().for_assets(<span class="macro">vec!</span>[usdc]).call().unwrap();
+</code></pre></div>
+</div></details><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="types/index.html" title="mod stellar_sdk::types">types</a></div></li><li><div class="item-name"><a class="mod" href="utils/index.html" title="mod stellar_sdk::utils">utils</a></div></li></ul><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.Keypair.html" title="struct stellar_sdk::Keypair">Keypair</a></div></li><li><div class="item-name"><a class="struct" href="struct.Server.html" title="struct stellar_sdk::Server">Server</a></div></li><li><div class="item-name"><a class="struct" href="struct.StellarTomlResolver.html" title="struct stellar_sdk::StellarTomlResolver">Stellar<wbr>Toml<wbr>Resolver</a></div></li><li><div class="item-name"><a class="struct" href="struct.StrKey.html" title="struct stellar_sdk::StrKey">StrKey</a></div></li></ul><h2 id="traits" class="section-header">Traits<a href="#traits" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="trait" href="trait.CallBuilder.html" title="trait stellar_sdk::CallBuilder">Call<wbr>Builder</a></div></li></ul></section></div></main></body></html>

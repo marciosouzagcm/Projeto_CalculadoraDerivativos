@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["all","for_account","for_ledger","for_operation","for_transaction"],"struct":["AllEffectsRequest","EffectsForAccountRequest","EffectsForLedgerRequest","EffectsForOperationRequest","EffectsForTransactionRequest"]};

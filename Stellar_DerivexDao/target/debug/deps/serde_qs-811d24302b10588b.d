@@ -1,0 +1,11 @@
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\libserde_qs-811d24302b10588b.rmeta: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\parse.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\error.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\ser.rs
+
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\libserde_qs-811d24302b10588b.rlib: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\parse.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\error.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\ser.rs
+
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\serde_qs-811d24302b10588b.d: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\parse.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\error.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\ser.rs
+
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\lib.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\mod.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\de\parse.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\error.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serde_qs-0.8.5\src\ser.rs:

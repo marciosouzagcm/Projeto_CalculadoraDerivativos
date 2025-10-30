@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ParseError","SameSite"],"struct":["Cookie","CookieBuilder","CookieJar","Delta","EncodedCookie","Iter","Key","PrivateJar","SignedJar"]};

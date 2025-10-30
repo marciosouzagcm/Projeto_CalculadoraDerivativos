@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["GetDestinationDefinitionSpecificationError","GetSpecificationForDestinationIdError"],"fn":["get_destination_definition_specification","get_specification_for_destination_id"]};

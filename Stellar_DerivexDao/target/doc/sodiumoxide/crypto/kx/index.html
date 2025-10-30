@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Key exchange"><title>sodiumoxide::crypto::kx - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="sodiumoxide" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.0-nightly (90ab8eaed 2024-11-14)" data-channel="nightly" data-search-js="search-6851d9ab.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../../../sodiumoxide/index.html">sodiumoxide</a><span class="version">0.2.6</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">Module kx</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#example" title="Example">Example</a></li></ul><h3><a href="#modules">Module Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li></ul></section><div id="rustdoc-modnav"><h2><a href="../index.html">In sodiumoxide::<wbr>crypto</a></h2></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><span class="rustdoc-breadcrumbs"><a href="../../index.html">sodiumoxide</a>::<wbr><a href="../index.html">crypto</a></span><h1>Module <span>kx</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../../../src/sodiumoxide/crypto\kx/mod.rs.html#1-39">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Key exchange</p>
+<p>Using the key exchange API, two parties can securely compute a set of shared keys using their
+peer’s public key and their own secret key.</p>
+<p>This API was introduced in libsodium 1.0.12.</p>
+<h2 id="example"><a class="doc-anchor" href="#example">§</a>Example</h2>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>sodiumoxide::crypto::kx;
+
+<span class="comment">// client-side
+</span><span class="kw">let </span>(client_pk, client_sk) = kx::gen_keypair();
+
+<span class="comment">// server-side
+</span><span class="kw">let </span>(server_pk, server_sk) = kx::gen_keypair();
+
+<span class="comment">// client and server exchanges client_pk and server_pk
+
+// client deduces the two session keys rx1 and tx1
+</span><span class="kw">let </span>(rx1, tx1) = <span class="kw">match </span>kx::client_session_keys(<span class="kw-2">&amp;</span>client_pk, <span class="kw-2">&amp;</span>client_sk, <span class="kw-2">&amp;</span>server_pk) {
+    <span class="prelude-val">Ok</span>((rx, tx)) =&gt; (rx, tx),
+    <span class="prelude-val">Err</span>(()) =&gt; <span class="macro">panic!</span>(<span class="string">"bad server signature"</span>),
+};
+
+<span class="comment">// server performs the same operation
+</span><span class="kw">let </span>(rx2, tx2) = <span class="kw">match </span>kx::server_session_keys(<span class="kw-2">&amp;</span>server_pk, <span class="kw-2">&amp;</span>server_sk, <span class="kw-2">&amp;</span>client_pk) {
+    <span class="prelude-val">Ok</span>((rx, tx)) =&gt; (rx, tx),
+    <span class="prelude-val">Err</span>(()) =&gt; <span class="macro">panic!</span>(<span class="string">"bad client signature"</span>),
+};
+
+<span class="macro">assert!</span>(rx1==tx2);
+<span class="macro">assert!</span>(rx2==tx1);
+</code></pre></div>
+</div></details><h2 id="reexports" class="section-header">Re-exports<a href="#reexports" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><code>pub use self::<a class="mod" href="x25519blake2b/index.html" title="mod sodiumoxide::crypto::kx::x25519blake2b">x25519blake2b</a>::*;</code></div></li></ul><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="x25519blake2b/index.html" title="mod sodiumoxide::crypto::kx::x25519blake2b">x25519blake2b</a></div><div class="desc docblock-short"><code>x25519blake2b</code> is the current default key exchange scheme of <code>libsodium</code>.</div></li></ul></section></div></main></body></html>

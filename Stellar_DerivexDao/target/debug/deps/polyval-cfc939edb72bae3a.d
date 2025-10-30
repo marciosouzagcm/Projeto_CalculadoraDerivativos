@@ -1,0 +1,10 @@
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\libpolyval-cfc939edb72bae3a.rmeta: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\autodetect.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\clmul.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\soft64.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\mulx.rs
+
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\polyval-cfc939edb72bae3a.d: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\autodetect.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\clmul.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\soft64.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\mulx.rs
+
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\lib.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\autodetect.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\clmul.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\backend\soft64.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\polyval-0.4.5\src\mulx.rs:

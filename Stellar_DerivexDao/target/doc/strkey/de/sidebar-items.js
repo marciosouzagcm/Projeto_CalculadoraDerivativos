@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Component"],"fn":["from_reader","from_slice"],"struct":["Deserializer","IoReader","SliceReader"],"trait":["ComponentRead"]};

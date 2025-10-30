@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FAIL_ERROR_FORMAT","MESSAGE_BUF_SIZE","UNKNOWN_ERROR"],"macro":["define_category"],"mod":["defs","types","utils"],"static":["POSIX_CATEGORY","SYSTEM_CATEGORY"],"struct":["Category","ErrorCode"],"type":["MessageBuf"]};

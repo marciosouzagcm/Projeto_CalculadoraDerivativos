@@ -1,0 +1,74 @@
+cargo-features = ["edition2024"]
+[package]
+name = "stellar_derivex_dao"
+version = "0.2.6"
+edition = "2021"
+authors = ["Marcio Souza <marciosouzagcm>"]
+description = "Biblioteca Stellar Derivex DAO para trading de derivativos descentralizados"
+license = "MIT"
+homepage = "https://www.linkedin.com/in/m%C3%A1rcio-souza-155171115/"
+repository = "https://github.com/marciosouzagcm/Stellar_DerivexDao.git"
+
+[dependencies]
+# Interface gráfica
+eframe = "0.30.0"
+# Stellar SDK
+stellar-base = "0.5.0"
+stellar-horizon = "0.6.0"
+soroban-sdk = "=22.0.5"
+stellar_sdk = "0.1.3"
+bitflags = "2.7.0"
+sodiumoxide = "0.2"
+# Assinaturas ED25519
+ed25519-dalek = { version = "2.0.0-rc.3" }
+
+# Geração de números aleatórios
+rand = "0.8.5"
+
+# Manipulação de erros
+thiserror = "2.0.10"
+anyhow = "1.0.68"
+
+# Codificação/decodificação
+strkey = "0.1.0"
+serde = { version = "1.0.144", features = ["derive"] }
+
+# Operações assíncronas
+async-std = "1.12.0"
+tokio = { version = "1.24.1", features = ["full"] }
+
+# Índices e caches
+index = "0.15.4"
+pagecache = "0.19.4"
+
+# Cliente Airbyte
+airbyte_client = { version = "0.41.0" }
+
+# Logging
+log = { version = "0.4.16", features = ["std", "serde"] }
+
+# ScyllaDB
+scylla = "0.15.1"
+scylla-cdc = "0.2.0"
+
+# Hashing e mnemônicos
+hex = "0.4.3"
+sha2 = "0.10.8"
+mnemonic = "1.1.1"
+
+[lib]
+name = "stellar_derivex_dao"
+path = "src/lib.rs"
+
+[[bin]]
+name = "stellar_derivex_dao"
+path = "src/main.rs"
+
+[[bin]]
+name = "exchange_app"
+path = "src/exchange_app.rs"
+
+[[test]]
+name = "tests"
+path = "tests/testes.rs"
+

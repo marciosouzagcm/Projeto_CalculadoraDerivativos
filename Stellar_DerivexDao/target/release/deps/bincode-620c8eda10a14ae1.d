@@ -1,0 +1,11 @@
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\release\deps\libbincode-620c8eda10a14ae1.rmeta: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\ser\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\read.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\internal.rs
+
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\release\deps\libbincode-620c8eda10a14ae1.rlib: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\ser\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\read.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\internal.rs
+
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\release\deps\bincode-620c8eda10a14ae1.d: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\ser\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\mod.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\read.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\internal.rs
+
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\lib.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\ser\mod.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\mod.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\de\read.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bincode-0.9.2\src\internal.rs:

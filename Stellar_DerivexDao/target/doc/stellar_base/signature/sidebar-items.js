@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["SignerKey"],"struct":["DecoratedSignature","HashX","PreAuthTxHash","Signature","SignatureHint","Signer"]};

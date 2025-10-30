@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["HASHEDPASSWORDBYTES","MEMLIMIT_INTERACTIVE","MEMLIMIT_SENSITIVE","OPSLIMIT_INTERACTIVE","OPSLIMIT_SENSITIVE","SALTBYTES","STRPREFIX"],"fn":["derive_key","derive_key_interactive","derive_key_sensitive","gen_salt","pwhash","pwhash_interactive","pwhash_sensitive","pwhash_verify"],"struct":["HashedPassword","MemLimit","OpsLimit","Salt"]};

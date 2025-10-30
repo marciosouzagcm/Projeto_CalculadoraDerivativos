@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Extension trait for the `Poller` type that provides functionality specific to IOCP-based platforms."><title>PollerIocpExt in polling::os::iocp - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="polling" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.0-nightly (90ab8eaed 2024-11-14)" data-channel="nightly" data-search-js="search-6851d9ab.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="sidebar-items.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="icon" href="https://raw.githubusercontent.com/smol-rs/smol/master/assets/images/logo_fullsize_transparent.png"></head><body class="rustdoc trait"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button><a class="logo-container" href="../../../polling/index.html"><img src="https://raw.githubusercontent.com/smol-rs/smol/master/assets/images/logo_fullsize_transparent.png" alt=""></a></nav><nav class="sidebar"><div class="sidebar-crate"><a class="logo-container" href="../../../polling/index.html"><img src="https://raw.githubusercontent.com/smol-rs/smol/master/assets/images/logo_fullsize_transparent.png" alt="logo"></a><h2><a href="../../../polling/index.html">polling</a><span class="version">3.7.4</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">Poller<wbr>Iocp<wbr>Ext</a></h2><h3><a href="#required-methods">Required Methods</a></h3><ul class="block"><li><a href="#tymethod.add_waitable" title="add_waitable">add_waitable</a></li><li><a href="#tymethod.modify_waitable" title="modify_waitable">modify_waitable</a></li><li><a href="#tymethod.post" title="post">post</a></li><li><a href="#tymethod.remove_waitable" title="remove_waitable">remove_waitable</a></li></ul><h3><a href="#dyn-compatibility">Dyn Compatibility</a></h3><h3><a href="#implementors">Implementors</a></h3></section><div id="rustdoc-modnav"><h2><a href="index.html">In polling::<wbr>os::<wbr>iocp</a></h2></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><span class="rustdoc-breadcrumbs"><a href="../../index.html">polling</a>::<wbr><a href="../index.html">os</a>::<wbr><a href="index.html">iocp</a></span><h1>Trait <span class="trait">PollerIocpExt</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../../../src/polling/os/iocp.rs.html#16-194">Source</a> </span></div><pre class="rust item-decl"><code>pub trait PollerIocpExt: PollerSealed {
+    // Required methods
+    fn <a href="#tymethod.post" class="fn">post</a>(&amp;self, packet: <a class="struct" href="struct.CompletionPacket.html" title="struct polling::os::iocp::CompletionPacket">CompletionPacket</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    unsafe fn <a href="#tymethod.add_waitable" class="fn">add_waitable</a>(
+        &amp;self,
+        handle: impl <a class="trait" href="trait.AsRawWaitable.html" title="trait polling::os::iocp::AsRawWaitable">AsRawWaitable</a>,
+        interest: <a class="struct" href="../../struct.Event.html" title="struct polling::Event">Event</a>,
+        mode: <a class="enum" href="../../enum.PollMode.html" title="enum polling::PollMode">PollMode</a>,
+    ) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.modify_waitable" class="fn">modify_waitable</a>(
+        &amp;self,
+        handle: impl <a class="trait" href="trait.AsWaitable.html" title="trait polling::os::iocp::AsWaitable">AsWaitable</a>,
+        interest: <a class="struct" href="../../struct.Event.html" title="struct polling::Event">Event</a>,
+        mode: <a class="enum" href="../../enum.PollMode.html" title="enum polling::PollMode">PollMode</a>,
+    ) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.remove_waitable" class="fn">remove_waitable</a>(&amp;self, handle: impl <a class="trait" href="trait.AsWaitable.html" title="trait polling::os::iocp::AsWaitable">AsWaitable</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;;
+}</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Extension trait for the <a href="../../struct.Poller.html" title="struct polling::Poller"><code>Poller</code></a> type that provides functionality specific to IOCP-based
+platforms.</p>
+</div></details><h2 id="required-methods" class="section-header">Required Methods<a href="#required-methods" class="anchor">§</a></h2><div class="methods"><details class="toggle method-toggle" open><summary><section id="tymethod.post" class="method"><a class="src rightside" href="../../../src/polling/os/iocp.rs.html#48">Source</a><h4 class="code-header">fn <a href="#tymethod.post" class="fn">post</a>(&amp;self, packet: <a class="struct" href="struct.CompletionPacket.html" title="struct polling::os::iocp::CompletionPacket">CompletionPacket</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Post a new <a href="../../struct.Event.html" title="struct polling::Event"><code>Event</code></a> to the poller.</p>
+<h5 id="examples"><a class="doc-anchor" href="#examples">§</a>Examples</h5>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>polling::{Poller, Event, Events};
+<span class="kw">use </span>polling::os::iocp::{CompletionPacket, PollerIocpExt};
+
+<span class="kw">use </span>std::thread;
+<span class="kw">use </span>std::sync::Arc;
+<span class="kw">use </span>std::time::Duration;
+
+<span class="comment">// Spawn a thread to wake us up after 100ms.
+</span><span class="kw">let </span>poller = Arc::new(Poller::new()<span class="question-mark">?</span>);
+thread::spawn({
+    <span class="kw">let </span>poller = poller.clone();
+    <span class="kw">move </span>|| {
+        <span class="kw">let </span>packet = CompletionPacket::new(Event::readable(<span class="number">0</span>));
+        thread::sleep(Duration::from_millis(<span class="number">100</span>));
+        poller.post(packet).unwrap();
+    }
+});
+
+<span class="comment">// Wait for the event.
+</span><span class="kw">let </span><span class="kw-2">mut </span>events = Events::new();
+poller.wait(<span class="kw-2">&amp;mut </span>events, <span class="prelude-val">None</span>)<span class="question-mark">?</span>;
+
+<span class="macro">assert_eq!</span>(events.len(), <span class="number">1</span>);</code></pre></div>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.add_waitable" class="method"><a class="src rightside" href="../../../src/polling/os/iocp.rs.html#101-106">Source</a><h4 class="code-header">unsafe fn <a href="#tymethod.add_waitable" class="fn">add_waitable</a>(
+    &amp;self,
+    handle: impl <a class="trait" href="trait.AsRawWaitable.html" title="trait polling::os::iocp::AsRawWaitable">AsRawWaitable</a>,
+    interest: <a class="struct" href="../../struct.Event.html" title="struct polling::Event">Event</a>,
+    mode: <a class="enum" href="../../enum.PollMode.html" title="enum polling::PollMode">PollMode</a>,
+) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Add a waitable handle to this poller.</p>
+<p>Some handles in Windows are “waitable”, which means that they emit a “readiness” signal
+after some event occurs. This function can be used to wait for such events to occur
+on a handle. This function can be used in addition to regular socket polling.</p>
+<p>Waitable objects include the following:</p>
+<ul>
+<li>Console inputs</li>
+<li>Waitable events</li>
+<li>Mutexes</li>
+<li>Processes</li>
+<li>Semaphores</li>
+<li>Threads</li>
+<li>Timer</li>
+</ul>
+<p>Once the object has been signalled, the poller will emit the <code>interest</code> event.</p>
+<h5 id="safety"><a class="doc-anchor" href="#safety">§</a>Safety</h5>
+<p>The added handle must not be dropped before it is deleted.</p>
+<h5 id="examples-1"><a class="doc-anchor" href="#examples-1">§</a>Examples</h5>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>polling::{Poller, Event, Events, PollMode};
+<span class="kw">use </span>polling::os::iocp::PollerIocpExt;
+
+<span class="kw">use </span>std::process::Command;
+
+<span class="comment">// Spawn a new process.
+</span><span class="kw">let </span><span class="kw-2">mut </span>child = Command::new(<span class="string">"echo"</span>)
+    .arg(<span class="string">"Hello, world!"</span>)
+    .spawn()
+    .unwrap();
+
+<span class="comment">// Create a new poller.
+</span><span class="kw">let </span>poller = Poller::new().unwrap();
+
+<span class="comment">// Add the child process to the poller.
+</span><span class="kw">unsafe </span>{
+    poller.add_waitable(<span class="kw-2">&amp;</span>child, Event::all(<span class="number">0</span>), PollMode::Oneshot).unwrap();
+}
+
+<span class="comment">// Wait for the child process to exit.
+</span><span class="kw">let </span><span class="kw-2">mut </span>events = Events::new();
+poller.wait(<span class="kw-2">&amp;mut </span>events, <span class="prelude-val">None</span>).unwrap();
+
+<span class="macro">assert_eq!</span>(events.len(), <span class="number">1</span>);
+<span class="macro">assert_eq!</span>(events.iter().next().unwrap(), Event::all(<span class="number">0</span>));</code></pre></div>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.modify_waitable" class="method"><a class="src rightside" href="../../../src/polling/os/iocp.rs.html#147-152">Source</a><h4 class="code-header">fn <a href="#tymethod.modify_waitable" class="fn">modify_waitable</a>(
+    &amp;self,
+    handle: impl <a class="trait" href="trait.AsWaitable.html" title="trait polling::os::iocp::AsWaitable">AsWaitable</a>,
+    interest: <a class="struct" href="../../struct.Event.html" title="struct polling::Event">Event</a>,
+    mode: <a class="enum" href="../../enum.PollMode.html" title="enum polling::PollMode">PollMode</a>,
+) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Modify an existing waitable handle.</p>
+<p>This function can be used to change the emitted event and/or mode of an existing waitable
+handle. The handle must have been previously added to the poller using <a href="trait.PollerIocpExt.html#tymethod.add_waitable"><code>add_waitable</code></a>.</p>
+<h5 id="examples-2"><a class="doc-anchor" href="#examples-2">§</a>Examples</h5>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>polling::{Poller, Event, Events, PollMode};
+<span class="kw">use </span>polling::os::iocp::PollerIocpExt;
+
+<span class="kw">use </span>std::process::Command;
+
+<span class="comment">// Spawn a new process.
+</span><span class="kw">let </span><span class="kw-2">mut </span>child = Command::new(<span class="string">"echo"</span>)
+    .arg(<span class="string">"Hello, world!"</span>)
+    .spawn()
+    .unwrap();
+
+<span class="comment">// Create a new poller.
+</span><span class="kw">let </span>poller = Poller::new().unwrap();
+
+<span class="comment">// Add the child process to the poller.
+</span><span class="kw">unsafe </span>{
+    poller.add_waitable(<span class="kw-2">&amp;</span>child, Event::all(<span class="number">0</span>), PollMode::Oneshot).unwrap();
+}
+
+<span class="comment">// Wait for the child process to exit.
+</span><span class="kw">let </span><span class="kw-2">mut </span>events = Events::new();
+poller.wait(<span class="kw-2">&amp;mut </span>events, <span class="prelude-val">None</span>).unwrap();
+
+<span class="macro">assert_eq!</span>(events.len(), <span class="number">1</span>);
+<span class="macro">assert_eq!</span>(events.iter().next().unwrap(), Event::all(<span class="number">0</span>));
+
+<span class="comment">// Modify the waitable handle.
+</span>poller.modify_waitable(<span class="kw-2">&amp;</span>child, Event::readable(<span class="number">0</span>), PollMode::Oneshot).unwrap();</code></pre></div>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.remove_waitable" class="method"><a class="src rightside" href="../../../src/polling/os/iocp.rs.html#193">Source</a><h4 class="code-header">fn <a href="#tymethod.remove_waitable" class="fn">remove_waitable</a>(&amp;self, handle: impl <a class="trait" href="trait.AsWaitable.html" title="trait polling::os::iocp::AsWaitable">AsWaitable</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/std/io/error/type.Result.html" title="type std::io::error::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Remove a waitable handle from this poller.</p>
+<p>This function can be used to remove a waitable handle from the poller. The handle must
+have been previously added to the poller using <a href="trait.PollerIocpExt.html#tymethod.add_waitable"><code>add_waitable</code></a>.</p>
+<h5 id="examples-3"><a class="doc-anchor" href="#examples-3">§</a>Examples</h5>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>polling::{Poller, Event, Events, PollMode};
+<span class="kw">use </span>polling::os::iocp::PollerIocpExt;
+
+<span class="kw">use </span>std::process::Command;
+
+<span class="comment">// Spawn a new process.
+</span><span class="kw">let </span><span class="kw-2">mut </span>child = Command::new(<span class="string">"echo"</span>)
+    .arg(<span class="string">"Hello, world!"</span>)
+    .spawn()
+    .unwrap();
+
+<span class="comment">// Create a new poller.
+</span><span class="kw">let </span>poller = Poller::new().unwrap();
+
+<span class="comment">// Add the child process to the poller.
+</span><span class="kw">unsafe </span>{
+    poller.add_waitable(<span class="kw-2">&amp;</span>child, Event::all(<span class="number">0</span>), PollMode::Oneshot).unwrap();
+}
+
+<span class="comment">// Wait for the child process to exit.
+</span><span class="kw">let </span><span class="kw-2">mut </span>events = Events::new();
+poller.wait(<span class="kw-2">&amp;mut </span>events, <span class="prelude-val">None</span>).unwrap();
+
+<span class="macro">assert_eq!</span>(events.len(), <span class="number">1</span>);
+<span class="macro">assert_eq!</span>(events.iter().next().unwrap(), Event::all(<span class="number">0</span>));
+
+<span class="comment">// Remove the waitable handle.
+</span>poller.remove_waitable(<span class="kw-2">&amp;</span>child).unwrap();</code></pre></div>
+</div></details></div><h2 id="dyn-compatibility" class="section-header">Dyn Compatibility<a href="#dyn-compatibility" class="anchor">§</a></h2><div class="dyn-compatibility-info"><p>This trait is <b>not</b> <a href="https://doc.rust-lang.org/nightly/reference/items/traits.html#object-safety">dyn compatible</a>.</p><p><i>In older versions of Rust, dyn compatibility was called "object safety", so this trait is not object safe.</i></p></div><h2 id="implementors" class="section-header">Implementors<a href="#implementors" class="anchor">§</a></h2><div id="implementors-list"><section id="impl-PollerIocpExt-for-Poller" class="impl"><a class="src rightside" href="../../../src/polling/os/iocp.rs.html#196-225">Source</a><a href="#impl-PollerIocpExt-for-Poller" class="anchor">§</a><h3 class="code-header">impl <a class="trait" href="trait.PollerIocpExt.html" title="trait polling::os::iocp::PollerIocpExt">PollerIocpExt</a> for <a class="struct" href="../../struct.Poller.html" title="struct polling::Poller">Poller</a></h3></section></div><script src="../../../trait.impl/polling/os/iocp/trait.PollerIocpExt.js" async></script></section></div></main></body></html>

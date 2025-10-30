@@ -1,0 +1,12 @@
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\libecdsa-085d154371065ad4.rmeta: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\normalized.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\recovery.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\der.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\hazmat.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\signing.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\verifying.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\../README.md
+
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\debug\deps\ecdsa-085d154371065ad4.d: C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\lib.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\normalized.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\recovery.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\der.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\hazmat.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\signing.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\verifying.rs C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\../README.md
+
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\lib.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\normalized.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\recovery.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\der.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\hazmat.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\signing.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\verifying.rs:
+C:\Users\DELL\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecdsa-0.16.9\src\../README.md:

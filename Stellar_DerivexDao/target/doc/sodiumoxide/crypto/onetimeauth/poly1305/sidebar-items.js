@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["KEYBYTES","TAGBYTES"],"fn":["authenticate","gen_key","verify"],"struct":["Key","Tag"]};

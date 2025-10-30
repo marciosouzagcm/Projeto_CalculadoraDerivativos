@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DIGESTBYTES","KEYBYTES"],"fn":["gen_key","shorthash"],"struct":["Digest","Key"]};

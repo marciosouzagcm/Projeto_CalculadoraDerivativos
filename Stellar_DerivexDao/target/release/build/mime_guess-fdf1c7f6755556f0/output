@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\release\build\mime_guess-fdf1c7f6755556f0\out\mime_types_generated.rs

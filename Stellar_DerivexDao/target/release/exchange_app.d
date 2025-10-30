@@ -1,0 +1,1 @@
+C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\target\release\exchange_app.exe: C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\src\exchange_app.rs C:\Users\DELL\Projeto_Stellar_DerivexDao\Stellar_DerivexDao\src\lib.rs

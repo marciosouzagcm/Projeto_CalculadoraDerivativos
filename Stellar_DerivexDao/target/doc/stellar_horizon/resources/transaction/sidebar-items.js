@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["FeeBumpTransaction","InnerTransaction","Transaction","TransactionLinks","TransactionResultCodes"]};

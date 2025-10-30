@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["Account","AccountData","AccountFlags","AccountLinks","AccountSigner","AccountSignerLinks","AccountThresholds","Balance","Signer"]};
